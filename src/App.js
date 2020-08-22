@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 import Search from './components/Search';
-import Products from './containers/Products';
+import Products from './components/Products';
 
 class App extends Component {
   render() {
