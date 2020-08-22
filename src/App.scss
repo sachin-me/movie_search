@@ -15,10 +15,11 @@
 
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
   margin-top: 50px;
+  padding-left: 30px;
   form {
     display: inline-flex;
   }
@@ -57,6 +58,92 @@
       top: 7px;
       position: absolute;
       left: 8px;
+    }
+  }
+  table {
+    width: 700px;
+    margin-top: 20px;
+    thead {
+      height: 40px;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 3px #DFE8F329;
+      border: 0.5px solid #707070;
+      border-radius: 11px;
+      opacity: 1;
+      display: block;
+      tr {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 8px 0 8px;
+        position: relative;
+        .year, .imdbid {
+          position: absolute;
+        }
+        .year {
+          left: 320px;
+        }
+        .imdbid {
+          right: 100px;
+        }
+        td {
+          text-align: center;
+          font: normal normal 600 14px/16px Work Sans;
+          letter-spacing: 0px;
+          color: #3B4557;
+          opacity: 1;
+        }
+      }
+    }
+    tbody {
+      height: 40px;
+      display: flex;
+      flex-direction: column;
+      tr {
+        padding: 8px 8px 8px 8px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 3px #DFE8F329;
+        border: 0.20000000298023224px solid #707070;
+        border-radius: 11px;
+        opacity: 1;
+        margin-top: 15px;
+        .product-year {
+          position: absolute;
+          left: 320px;
+          text-align: center;
+          font: normal normal normal 16px/19px Work Sans;
+          letter-spacing: 0px;
+          color: #3B4557;
+          opacity: 1;
+        }
+        .product-title {
+          text-align: center;
+          font: normal normal normal 16px/19px Work Sans;
+          letter-spacing: 0px;
+          color: #3B4557;
+          opacity: 1;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .product-imdb-id {
+          text-align: center;
+          font: normal normal normal 16px/19px Work Sans;
+          letter-spacing: 0px;
+          color: #3B4557;
+          opacity: 1;
+          position: absolute;
+          right: 80px;
+        }
+        .trash-td {
+          cursor: pointer;
+          img {
+            height: 20px;
+            width: 20px;
+          }
+        }
+      }
     }
   }
 }

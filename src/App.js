@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 import Search from './components/Search';
+import Products from './containers/Products';
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
         </header>
         <main className='container'>
           <Search />
+          <Products />
         </main>
       </div>
     );
