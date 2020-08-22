@@ -34,9 +34,23 @@ class Products extends Component {
             <table>
               <thead>
                 <tr>
-                  <td>Title</td>
-                  <td className='year'>Year</td>
-                  <td className='imdbid'>imdbID</td>
+                  <td><span>Title</span>
+                  <div className='sort'>
+                    <img className='sort-down' src={require('../images/angle-down-solid.svg')} alt="" srcset=""/>
+                    <img className='sort-up' src={require('../images/angle-up-solid.svg')} alt="" srcset=""/>
+                  </div></td>
+                  <td className='year'><span>Year</span>
+                  <div className='sort'>
+                    <img className='sort-down' src={require('../images/angle-down-solid.svg')} alt="" srcset=""/>
+                    <img className='sort-up' src={require('../images/angle-up-solid.svg')} alt="" srcset=""/>
+                  </div>
+                  </td>
+                  <td className='imdbid'><span>imdbID</span>
+                  <div className='sort'>
+                    <img className='sort-down' src={require('../images/angle-down-solid.svg')} alt="" srcset=""/>
+                    <img className='sort-up' src={require('../images/angle-up-solid.svg')} alt="" srcset=""/>
+                  </div>
+                  </td>
                   {/* <td></td> */}
                 </tr>
               </thead>
