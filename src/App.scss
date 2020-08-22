@@ -95,7 +95,7 @@
           .sort {
             display: inline-block;
             position: absolute;
-            top: 5px;
+            top: 4px;
             margin-left: 5px;
           }
           .sort-up {
@@ -105,17 +105,11 @@
             left: 0px;
             bottom: 15px;
             cursor: pointer;
-            &:active {
-              color: #3B4557;
-            }
           }
           .sort-down {
             height: 20px;
             width: 10px;
             cursor: pointer;
-            &:active {
-              color: #3B4557;
-            }
           }
         }
       }

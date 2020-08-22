@@ -23,6 +23,65 @@ class Products extends Component {
     })
   }
 
+  handleSort = (type, order) => {
+    const { movies } = this.state;
+
+    if (type === 'Title' && order === 'asc') {
+
+      this.setState({
+        movies: movies.slice(0).sort(function(a,b) {
+          return (a[type] > b[type]) ? 1 : (a[type] < b[type]) ? -1 : 0;
+        })
+      });
+
+    } 
+    if (type === 'Title' && order === 'dsc') {
+
+      return this.setState({
+        movies: movies.slice(0).sort(function(a,b) {
+          return (a[type] < b[type]) ? 1 : (a[type] > b[type]) ? -1 : 0;
+        })
+      });
+
+    }
+    if (type === 'Year' && order === 'asc') {
+
+      return this.setState({
+        movies: movies.slice(0).sort(function(a,b) {
+          return (a[type] > b[type]) ? 1 : (a[type] < b[type]) ? -1 : 0;
+        })
+      });
+
+    }
+    if (type === 'Year' && order === 'dsc') {
+
+      return this.setState({
+        movies: movies.slice(0).sort(function(a,b) {
+          return (a[type] < b[type]) ? 1 : (a[type] > b[type]) ? -1 : 0;
+        })
+      });
+
+    }
+    if (type === 'imdbID' && order === 'asc') {
+
+      return this.setState({
+        movies: movies.slice(0).sort(function(a,b) {
+          return (a[type] > b[type]) ? 1 : (a[type] < b[type]) ? -1 : 0;
+        })
+      });
+
+    }
+    if (type === 'imdbID' && order === 'dsc') {
+
+      return this.setState({
+        movies: movies.slice(0).sort(function(a,b) {
+          return (a[type] < b[type]) ? 1 : (a[type] > b[type]) ? -1 : 0;
+        })
+      });
+
+    }
+  }
+
   render() {
     const { movies } = this.state;
     const { products } = this.props;
@@ -36,19 +95,19 @@ class Products extends Component {
                 <tr>
                   <td><span>Title</span>
                   <div className='sort'>
-                    <img className='sort-down' src={require('../images/angle-down-solid.svg')} alt="" srcset=""/>
-                    <img className='sort-up' src={require('../images/angle-up-solid.svg')} alt="" srcset=""/>
+                    <img className='sort-down' src={require('../images/caret-down-solid.svg')} alt="" srcset="" onClick={() => this.handleSort('Title', 'asc')} />
+                    <img className='sort-up' src={require('../images/caret-up-solid.svg')} alt="" srcset="" onClick={() => this.handleSort('Title', 'dsc')} />
                   </div></td>
                   <td className='year'><span>Year</span>
                   <div className='sort'>
-                    <img className='sort-down' src={require('../images/angle-down-solid.svg')} alt="" srcset=""/>
-                    <img className='sort-up' src={require('../images/angle-up-solid.svg')} alt="" srcset=""/>
+                    <img className='sort-down' src={require('../images/caret-down-solid.svg')} alt="" srcset="" onClick={() => this.handleSort('Year', 'asc')} />
+                    <img className='sort-up' src={require('../images/caret-up-solid.svg')} alt="" srcset="" onClick={() => this.handleSort('Year', 'dsc')} />
                   </div>
                   </td>
                   <td className='imdbid'><span>imdbID</span>
                   <div className='sort'>
-                    <img className='sort-down' src={require('../images/angle-down-solid.svg')} alt="" srcset=""/>
-                    <img className='sort-up' src={require('../images/angle-up-solid.svg')} alt="" srcset=""/>
+                    <img className='sort-down' src={require('../images/caret-down-solid.svg')} alt="" srcset="" onClick={() => this.handleSort('imdbID', 'asc')} />
+                    <img className='sort-up' src={require('../images/caret-up-solid.svg')} alt="" srcset="" onClick={() => this.handleSort('imdbID', 'dsc')} />
                   </div>
                   </td>
                   {/* <td></td> */}
