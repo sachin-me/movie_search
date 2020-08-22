@@ -7,6 +7,7 @@ function rootReducer(state = initState, action) {
     case 'GET_PRODUCTS_LIST':
       return {
         ...state,
+        products: action.data
       }
 
     default: return state;

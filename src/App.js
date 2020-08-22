@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import './App.scss';
+import Search from './components/Search';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <a href='/' className='header-link'>Movie Search</a>
+          <div className='header-link'>Movie Search</div>
         </header>
+        <main className='container'>
+          <Search />
+        </main>
       </div>
     );
   }
